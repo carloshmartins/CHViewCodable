@@ -23,7 +23,7 @@ Make sure Xcode is installed first and then add this SPM via git url inside Xcod
 Add the following to your Package.swift file's dependencies:
 
 ```swift
-.package(url: "https://github.com/carloshmartins/CHViewCodable", from: "0.1.0"),
+.package(url: "https://github.com/carloshmartins/CHViewCodable", from: "0.2.0"),
 ```
 
 And then import wherever needed: `import CHViewCodable`
