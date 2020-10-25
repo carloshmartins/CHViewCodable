@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  UIView+Extensions.swift
 //  
 //
 //  Created by Carlos Henrique Martins on 10/13/20.
@@ -10,16 +10,17 @@ import UIKit
 @available(iOS 9.0, *)
 extension UIView {
 
-    /// Returns a collection of constraints to anchor the bounds of the current view to the given view.
+    /// Setup a View related to its superview based on UIEdegedInsets.
     ///
-    /// - Parameter view: The view to anchor to.
-    /// - Returns: The layout constraints needed for this constraint.
-    func constraintsForAnchoringTo(boundsOf view: UIView) -> [NSLayoutConstraint] {
-        return [
-            topAnchor.constraint(equalTo: view.topAnchor),
-            leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            view.bottomAnchor.constraint(equalTo: bottomAnchor),
-            view.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ]
+    /// - Parameter view: The view to anchor.
+    /// - Parameter superview: The superviewview to anchor to.
+    /// - Parameter edge: The UIEdgedInsets properties..
+    func setupConstraints<T: UIView, Q: UIView>(for view: T, with superview: Q, basedOn edge: UIEdgeInsets )  {
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: superview.topAnchor, constant: edge.top),
+            view.leftAnchor.constraint(equalTo: superview.leftAnchor, constant: edge.left),
+            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: edge.right),
+            view.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: edge.bottom)
+        ])
     }
 }
