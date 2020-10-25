@@ -8,7 +8,7 @@
 import UIKit
 
 @available(iOS 9.0, *)
-extension UIView {
+public extension UIView {
 
     /// Setup a View related to its superview based on UIEdegedInsets.
     ///
