@@ -3,17 +3,13 @@
 [![SPM](https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=for-the-badge)](https://swift.org/package-manager)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS-blue.svg?style=for-the-badge)
 
-A package manager that installs all my main View Code Helpers/Extensions used in my personal projects.
+CHViewCodable is designed to be used with any iOS Projects based on View-Code
 
-CHViewCodable is designed to be used with any iOS Projects based on View-Code; uses User Defaults and it needs to create lazy variable in computed variable for UI Objects. It consists of:
-
-- ✅ AutolayoutWrappers
-- ✅ UIView+Extensions
+- ✅ LayoutDimension
 
 The Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
-## Why is it called CHViewCodable?
-Carlos Henrique's ViewCodable
+- This code is heavily inspired from https://github.com/SnapKit/SnapKit and some internal tools used in my past jobs.
 
 ## Installing
 Make sure Xcode is installed first and then add this SPM via git url inside Xcode, just like any other Package.
@@ -23,7 +19,7 @@ Make sure Xcode is installed first and then add this SPM via git url inside Xcod
 Add the following to your Package.swift file's dependencies:
 
 ```swift
-.package(url: "https://github.com/carloshmartins/CHViewCodable", from: "0.2.0"),
+.package(url: "https://github.com/carloshmartins/CHViewCodable", from: "0.3.0"),
 ```
 
 And then import wherever needed: `import CHViewCodable`
