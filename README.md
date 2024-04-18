@@ -9,7 +9,7 @@ CHViewCodable is designed to be used with any iOS Projects based on View-Code
 
 The Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
-- This code is heavily inspired from https://github.com/SnapKit/SnapKit and some internal tools used in my past jobs.
+- This code is heavily inspired by https://github.com/SnapKit/SnapKit and some internal tools used in my past jobs. This is another Autolayout proxy of thousands out there, but I used this as my own for my own UIKit-based projects.
 
 ## Installing
 Make sure Xcode is installed first and then add this SPM via git url inside Xcode, just like any other Package.
